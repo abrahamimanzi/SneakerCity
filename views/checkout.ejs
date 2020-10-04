@@ -1,0 +1,164 @@
+
+        <%- include layouts/header.ejs %>
+        <main class="main-content">
+
+                <nav class="breadcrumb" aria-label="breadcrumbs">
+
+                        <h1> CHECKOUT</h1>
+
+                        <a href="/users/cart" title="Back to the cart">Cart</a>
+
+                        <span aria-hidden="true" class="breadcrumb__sep">&#47;</span>
+                        <span> Checkout</span>
+
+                </nav>
+
+                <div class="dt-sc-hr-invisible-large"></div>
+                <div class="wrapper">
+
+                        <div class="container">
+                                <h2>Sign up to great new account </h2>
+                                <form method="POST" id="signup-form" class="signup-form">
+                                    <h3>
+                                        <span class="title_text">Personal Infomation</span>
+                                    </h3>
+                                    <fieldset>
+                                        <div class="fieldset-content">
+                                            <div class="form-group">
+                                                <label for="username" class="form-label">Username</label>
+                                                <input type="text" name="username" id="username" placeholder="User Name" />
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="email" class="form-label">Email</label>
+                                                <input type="email" name="email" id="email" placeholder="Your Email" />
+                                            </div>
+                        
+                                            <div class="form-radio">
+                                                <label for="gender" class="form-label">Gender</label>
+                                                <div class="form-radio-item">
+                                                    <input type="radio" name="gender" value="male" id="male" checked="checked" />
+                                                    <label for="male">Male</label>
+                        
+                                                    <input type="radio" name="gender" value="female" id="female" />
+                                                    <label for="female">Female</label>
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group form-password">
+                                                <label for="password" class="form-label">Password</label>
+                                                <input type="password" name="password" id="password" data-indicator="pwindicator" />
+                                                <div id="pwindicator">
+                                                    <div class="bar-strength">
+                                                        <div class="bar-process">
+                                                            <div class="bar"></div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="label"></div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                        <div class="fieldset-footer">
+                                            <span>Step 1 of 3</span>
+                                        </div>
+                                    </fieldset>
+                    
+                                    <h3>
+                                        <span class="title_text">Delivery Information</span>
+                                    </h3>
+                                    <fieldset>
+                    
+                                        <div class="fieldset-content">
+                                                <div class="form-group">
+                                                    <label for="full_name" class="form-label">Full name</label>
+                                                    <input type="text" name="full_name" id="full_name" placeholder="Full Name" />
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label for="phone" class="form-label">Phone number</label>
+                                                    <input type="text" name="phone" id="phone" placeholder="+250 7 XXXXXXXX" />
+                                                </div>
+                        
+                                            <div class="form-select">
+                                                <label for="country" class="form-label">Province</label>
+                                                <select name="country" id="country">
+                                                    <option value="">Province</option>
+                                                    <option value="Kigali">Kigali</option>
+                                                    <option value="Southern">Southern</option>
+                                                    <option value="Western">Western</option>
+                                                    <option value="Northern">Northern</option>
+                                                    <option value="Eastern">Eastern</option>
+                                                </select>
+                                            </div>
+                        
+                                            <div class="form-textarea">
+                                                <label for="address" class="form-label">Address</label>
+                                                <textarea name="address" id="address" placeholder="Identify clearly your address, where we can deliver your items ..."></textarea>
+                                            </div>
+                                        </div>
+                    
+                                        <div class="fieldset-footer">
+                                            <span>Step 2 of 3</span>
+                                        </div>
+                    
+                                    </fieldset>
+                    
+                                    <h3>
+                                        <span class="title_text">Payment Details</span>
+                                    </h3>
+                                    <fieldset>
+                                        <div class="fieldset-content">
+                                            <div class="form-radio">
+                                                <label for="payment_type">Payment Type</label>
+                                                <div class="form-radio-flex">
+                                                    <input type="radio" name="payment_type" id="payment_visa" value="payment_visa" checked="checked" />
+                                                    <label for="payment_visa"><img src="/static/images/icon-visa.png" alt=""></label>
+                        
+                                                    <input type="radio" name="payment_type" id="payment_master" value="payment_master" />
+                                                    <label for="payment_master"><img src="/static/images/icon-master.png" alt=""></label>
+                        
+                                                    <input type="radio" name="payment_type" id="payment_paypal" value="payment_paypal" />
+                                                    <label for="payment_paypal"><img src="/static/images/icon-paypal.png" alt=""></label>
+                                                </div>
+                                            </div>
+                                            <div class="form-row">
+                                                <div class="form-group">
+                                                    <label for="credit_card" class="form-label">Credit Card</label>
+                                                    <input type="text" name="credit_card" id="credit_card" />
+                                                </div>
+                                                <div class="form-group">
+                                                    <label for="cvc" class="form-label">CVC</label>
+                                                    <input type="text" name="cvc" id="cvc" />
+                                                </div>
+                                            </div>
+                                            <div class="form-date">
+                                                <label for="expiry_date">Expiration Date</label>
+                                                <div class="form-flex">
+                                                    <div class="form-date-item">
+                                                        <select id="expiry_date" name="expiry_date"></select>
+                                                        <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                                    </div>
+                                                    <div class="form-date-item">
+                                                        <select id="expiry_year" name="expiry_year"></select>
+                                                        <span class="select-icon"><i class="zmdi zmdi-chevron-down"></i></span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for="name_of_card" class="form-label">Name of card</label>
+                                                <input type="text" name="name_of_card" id="name_of_card" />
+                                            </div>
+                                        </div>
+                    
+                                        <div class="fieldset-footer">
+                                            <span>Step 3 of 3</span>
+                                        </div>
+                                    </fieldset>
+                                </form>
+                            </div>
+
+                </div>
+
+        </main>
+
+        <%- include layouts/footer.ejs %>

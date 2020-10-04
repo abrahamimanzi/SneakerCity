@@ -1,0 +1,266 @@
+        <%- include layouts/header.ejs %>
+
+        <main class="main-content">
+
+            <nav class="breadcrumb" aria-label="breadcrumbs">
+
+                <h1>Your Shopping Cart</h1>
+                <a href="/" title="Back to the frontpage">Home</a>
+
+                <span aria-hidden="true" class="breadcrumb__sep">/</span>
+                <span>Your Shopping Cart</span>
+
+            </nav>
+
+            <div class="dt-sc-hr-invisible-large"></div>
+            <div class="wrapper">
+
+                <div class="grid__item">
+
+                    <form action="/users/checkout" method="get" novalidate="" class="cart">
+
+                        <div class="cart__row cart__header-labels">
+                            <div class="grid--full">
+                                <div class="grid__item four-tenths">
+                                    <div class="grid">
+                                        <div class="grid__item">
+
+                                            <span class="h4">Product</span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="grid__item six-tenths">
+                                    <div class="grid--full">
+                                        <div class="grid__item one-quarter small--one-fifth">
+                                            <span class="h4 cart__mini-labels">Price</span>
+                                        </div>
+                                        <div class="grid__item one-quarter small--one-fifth">
+                                            <span class="h4 cart__mini-labels">Quantity</span>
+                                        </div>
+                                        <div class="grid__item one-quarter small--one-fifth">
+                                            <span class="h4 cart__mini-labels">Total</span>
+                                        </div>
+                                        <div class="grid__item one-quarter small--one-fifth">
+                                            <span class="h4 cart__mini-labels">Remove</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="cart__row">
+                            <div class="grid--full cart__row--table-large">
+                                <div class="grid__item four-tenths">
+                                    <div class="grid cart_items">
+                                        <div class="grid__item wide--one-half post-large--one-half large--one-half">
+
+                                            <a href="/users/sneaker" class="cart__image">
+
+                                                <img src="/static/images/shoe9_0926fd04-01c0-4c74-b158-0fc24171828f_grandee471.jpg" alt="Climbing shoe - grey / 9.5 / plastics">
+                                            </a>
+                                        </div>
+                                        <div class="grid__item one-half cart-title">
+                                            <a href="/products/ladies4zone-dress?variant=40668505038" class="h5">
+                                                Climbing shoe
+                                            </a>
+
+                                            <br>
+                                            <small>grey / 9.5 / plastics</small>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class="grid__item six-tenths">
+                                    <div class="grid--full cart__row--table-large">
+
+                                        <div class="grid__item one-quarter">
+                                            <span class="h4 cart__large-labels">Price</span>
+                                            <span class="h5"><span class="money" data-currency-usd="20000RWF">20000RWF</span></span>
+                                        </div>
+
+                                        <div class="grid__item one-quarter text-center">
+                                            <span class="h4 cart__large-labels">Quantity</span>
+
+                                            <div class="qty-box-set">
+                                                <input type="button" value="-" class="qtyminus1">
+                                                <input type="number" class="quantity-selector cart-number" name="updates[]" id="updates_40668505038" value="1" min="0">
+                                                <input type="button" value="+" class="qtyplus1">
+                                            </div>
+                                        </div>
+
+                                        <div class="grid__item one-quarter text-right">
+                                            <span class="h4 cart__large-labels">Total</span>
+                                            <span class="h5">
+
+                                            <span class="money" data-currency-usd="20000RWF">20000RWF</span>
+                                            </span>
+
+                                        </div>
+                                        <div class="grid__item one-quarter text-center">
+                                            <span class="h4 cart__large-labels">Remove</span>
+
+                                            <a href="#" class="cart__remove">
+                                                <span><i class="fa fa-trash"></i></span>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="cart__row">
+                            <div class="grid shipping-section">
+
+                                <div class="grid__item wide--one-half post-large--one-half large--one-half">
+                                    <button type="button" class="text-link cart__note-add">
+                                        Add a note to your order
+                                    </button>
+                                    <div class="cart__note">
+                                        <label for="CartSpecialInstructions">Special instructions for seller</label>
+                                        <textarea name="note" class="input-full" id="CartSpecialInstructions"></textarea>
+                                    </div>
+                                </div>
+
+                                <div class="grid__item text-right wide--one-half post-large--one-half large--one-half">
+                                    <p class="cart_total_price" style="margin:0;">
+                                        <span class="cart__subtotal-title h5">Subtotal</span>
+                                        <span class="h5 cart__subtotal"><span class="money" data-currency-usd="20000RWF">20000RWF</span></span>
+
+                                    </p>
+                                    <p class="shopping-checkout"><em>Shipping, taxes, and discounts will be calculated at checkout.</em></p>
+
+                                    <div class="cart_btn">
+                                        <a class="btn" href="/">Continue shopping</a>
+
+                                        <!-- <input type="submit" name="update" class="btn update-cart" value="Update Cart"> -->
+                                        <input type="hidden" name="tprice">
+                                        <input type="submit" name="checkout" class="btn" value="Check Out">
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </form>
+
+                    <script>
+                        $('.qtyplus1').click(function(e) {
+                            e.preventDefault();
+                            var currentVal = parseInt($(this).parent().find('input[name="updates[]"]').val());
+                            if (!isNaN(currentVal)) {
+                                $(this).parent().find('input[name="updates[]"]').val(currentVal + 1);
+                            } else {
+                                $(this).parent().find('input[name="updates[]"]').val(1);
+                            }
+                        });
+
+                        $(".qtyminus1").click(function(e) {
+
+                            e.preventDefault();
+                            var currentVal = parseInt($(this).parent().find('input[name="updates[]"]').val());
+                            if (!isNaN(currentVal) && currentVal > 1) {
+                                $(this).parent().find('input[name="updates[]"]').val(currentVal - 1);
+                            } else {
+                                $(this).parent().find('input[name="updates[]"]').val(1);
+                            }
+                        });
+                    </script>
+
+                </div>
+
+
+
+
+                
+
+            </div>
+
+            <div class="dt-sc-hr-invisible-large"></div>
+
+            <div id="shopify-section-1492075634007" class="shopify-section index-section">
+                <div data-section-id="1492075634007" data-section-type="support-block-type-1" class="support-block-type-1">
+                    <div class="grid-uniform">
+                        <ul class="support_block" style="background:#fbfbfb;">
+
+                            <li class="grid__item wide--one-quarter post-large--one-quarter large--one-quarter medium--one-half small-grid__item wow fadeInUp" data-wow-delay="ms">
+                                <div class="support_section">
+                                    <div class="support_inner">
+
+                                        <div class="support_icon">
+                                            <i class="fa fa-plane" style="color:#000;"></i>
+                                        </div>
+
+                                        <div class="support_text">
+
+                                            <h2 style="color:#000;">Free <br>Delivery</h2>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="grid__item wide--one-quarter post-large--one-quarter large--one-quarter medium--one-half small-grid__item wow fadeInUp" data-wow-delay="ms">
+                                <div class="support_section">
+                                    <div class="support_inner">
+
+                                        <div class="support_icon">
+                                            <i class="fa fa-headphones" style="color:#000;"></i>
+                                        </div>
+
+                                        <div class="support_text">
+
+                                            <h2 style="color:#000;">Clients <br> Discounts</h2>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="grid__item wide--one-quarter post-large--one-quarter large--one-quarter medium--one-half small-grid__item wow fadeInUp" data-wow-delay="ms">
+                                <div class="support_section">
+                                    <div class="support_inner">
+
+                                        <div class="support_icon">
+                                            <i class="fa fa-exchange" style="color:#000;"></i>
+                                        </div>
+
+                                        <div class="support_text">
+
+                                            <h2 style="color:#000;">Return <br>of goods</h2>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                            <li class="grid__item wide--one-quarter post-large--one-quarter large--one-quarter medium--one-half small-grid__item wow fadeInUp" data-wow-delay="ms">
+                                <div class="support_section">
+                                    <div class="support_inner">
+
+                                        <div class="support_icon">
+                                            <i class="fa fa-gg" style="color:#000;"></i>
+                                        </div>
+
+                                        <div class="support_text">
+
+                                            <h2 style="color:#000;">Many <br> Brands</h2>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+
+            </div>
+        </main>
+
+        <%- include layouts/footer.ejs %>
