@@ -33,6 +33,7 @@ The e-commerce for shoes
 
 
 
+NB: In case you need a demo of the app ,The app is deployed on heroku https://sneakercity.herokuapp.com/
 
 
 If you are using VsCode, you can install the extension better-comments extensions.
