@@ -19,14 +19,14 @@ The e-commerce for shoes
 
 - https://github.com/abrahamimanzi/sneakercity
 
-2. After downloading ,Go to the project directory 
+2. After downloading, Go to the project directory in terminal or CMD
    e.g cd /home/public/Desktop/sneakercity for linux
-       cd c:\\Users\public\Desktop\sneakercity for linux
-       cd /Users/public/Desktop/sneakercity
+       cd c:\\Users\public\Desktop\sneakercity for windows
+       cd /Users/public/Desktop/sneakercity for mac os
 
 3. Just run the following
-   npm install
-   npm start
+   - npm install
+   - npm start
 
 
 4. You should now have the Application running on port 3000 e.g:http://localhost:3000
