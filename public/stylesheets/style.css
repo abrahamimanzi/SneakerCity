@@ -3634,7 +3634,7 @@ label[for="product-select-option-0"] {
 #product-select-option-0 + .custom-style-select-box {
     display: none !important;
 }
-
+.about-us .righttxt-block p::before { border-left: 1px solid {{section.settings.section_2_bordercolor}};}
 
 /* checkout */
 display-flex, .form-group, .form-select, .form-radio, .form-textarea, .form-date, .form-radio-item, .form-flex, .form-date-item .select-icon, .form-date-item .select-icon i, #val, #button, .steps ul, .actions ul, .actions ul li a, .title, .number {
@@ -4230,41 +4230,55 @@ input, select, textarea {
     margin-bottom: 15px; }
 
   .form-row {
-    padding-left: 0px; } }
-    @media screen and (max-width: 600px) {
-      #val {
-        width: 99%; }
-    
-      #button {
-        top: 60px;
-        width: 100%; }
-    
-      .fieldset-footer {
-        padding: 78px 0; }
-    
-      .actions ul li a {
-        width: 100px; }
-    
-      .steps ul li {
-        padding-right: 0px; } }
-    @media screen and (max-width: 480px) {
-      .signup-form {
-        padding-left: 30px;
-        padding-right: 30px; }
-    
-      .form-radio-flex input + label {
-        margin-bottom: 20px; }
-    
-      .form-flex {
-        flex-direction: column;
-        -moz-flex-direction: column;
-        -webkit-flex-direction: column;
-        -o-flex-direction: column;
-        -ms-flex-direction: column; }
-    
-      .form-date-item #expiry_date, .form-date-item #expiry_year {
-        width: 100%;
-        margin-bottom: 10px; }
-    
-      .fieldset-content {
-        height: 750px; } }
+    padding-left: 0px; 
+  } 
+}
+@media screen and (max-width: 600px) {
+  #val {
+    width: 99%; }
+
+  #button {
+    top: 60px;
+    width: 100%; }
+
+  .fieldset-footer {
+    padding: 78px 0; }
+
+  .actions ul li a {
+    width: 100px; }
+
+  .steps ul li {
+    padding-right: 0px; } 
+}
+@media screen and (max-width: 480px) {
+  .signup-form {
+    padding-left: 30px;
+    padding-right: 30px; }
+
+  .form-radio-flex input + label {
+    margin-bottom: 20px; }
+
+  .form-flex {
+    flex-direction: column;
+    -moz-flex-direction: column;
+    -webkit-flex-direction: column;
+    -o-flex-direction: column;
+    -ms-flex-direction: column; }
+
+  .form-date-item #expiry_date, .form-date-item #expiry_year {
+    width: 100%;
+    margin-bottom: 10px; }
+
+  .fieldset-content {
+    height: 750px; } 
+}
+.black-color{
+  color: #000000 !important;
+}
+
+.filter-grid-type-1 .sorting-container a:hover,
+.filter-grid-type-1 .sorting-container a.active-all {
+  color: #000 !important;
+}
+
+

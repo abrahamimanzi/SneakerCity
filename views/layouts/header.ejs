@@ -16,10 +16,8 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Sneaker City | Bk Shoes store">
     <meta property="og:url" content="/users/home">
-
     <meta property="og:image" content="/static/images/logo.png">
     <meta property="og:image:secure_url" content="/static/images/logo.png">
-
     <meta property="og:site_name" content="Sneaker City">
 
     <meta name="twitter:card" content="summary">
@@ -41,17 +39,14 @@
     <link href="/static/stylesheets/settings.css" rel="stylesheet" type="text/css" media="all" />
 
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300,300italic,400,600,400italic,600italic,700,700italic,800,800italic">
-
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto+Condensed:300,300italic,400,600,400italic,600italic,700,700italic,800,800italic">
-
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Poppins:300,300italic,400,600,400italic,600italic,700,700italic,800,800italic">
 
-    <!-- Header hook for plugins ================================================== -->
+    <!-- js -->
 
-    <script integrity="sha256-tktEFIGLNKynPir1LpzrxF6FtKdUgas1Q0dwY8CRLfs=" defer="defer" src="/static/javascripts/express_buttons.js" crossorigin="anonymous"></script>
-    <script integrity="sha256-NfqRkSQwKw0JfNupCky6Zxtoijw8YUA8km/3gYu7kY8=" defer="defer" src="/static/javascripts/features.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" media="screen" href="/static/stylesheets/styles.css">
-    <script id="sections-script" data-sections="grid-banner-type-1,top-bar" defer="defer" src="/static/javascripts/scripts.js"></script>
+    <script src="/static/javascripts/express_buttons.js" integrity="sha256-tktEFIGLNKynPir1LpzrxF6FtKdUgas1Q0dwY8CRLfs=" defer="defer" crossorigin="anonymous"></script>
+    <script src="/static/javascripts/features.js" integrity="sha256-NfqRkSQwKw0JfNupCky6Zxtoijw8YUA8km/3gYu7kY8=" defer="defer" crossorigin="anonymous"></script>
+    <script src="/static/javascripts/scripts.js" id="sections-script" data-sections="grid-banner-type-1,top-bar" defer="defer"></script>
 
     <script src="/static/javascripts/jquery.min.js"></script>
     <script src="/static/javascripts/jquery-cookie.min.js" type="text/javascript"></script>
@@ -204,7 +199,7 @@
                                                                             </li>
 
                                                                             <li>
-                                                                                <a class="wishlist" href="#" title="Wishlist">Wishlist</a>
+                                                                                <a href="#" class="wishlist" title="Wishlist">Wishlist</a>
 
                                                                             </li>
 
@@ -229,54 +224,6 @@
                                                             <div id="cartCount">
                                                                 0
                                                             </div>
-                                                            <script>
-                                                                $(window).load(function() {
-                                                                    if (localStorage.clickcount>0){
-                                                                        $("#static-item").css("display", "block");
-                                                                        document.getElementById("cartCount").innerHTML = localStorage.clickcount;
-                                                                        var obj = JSON.parse(localStorage.testObject);
-                                                                        // document.getElementById("cartPrice").innerHTML = obj.price;
-                                                                        // document.getElementById("cartName").innerHTML = obj.model;
-                                                                        // $("#cartImg").attr("src",obj.imgsrc);
-                                                                        // var myVariable = obj["three"];
-
-                                                                        var rows = JSON.parse(localStorage.testObject);
-
-                                                                        // forEach (var myArray as var k=>rows) {
-                                                                        //     forEach (rows as var price=>rows[i].price) {
-                                                                        //         var sumArray[price]+=rows[i].price;
-                                                                        //     }
-                                                                        // }
-                                                                        // alert(sumArray);
-
-
-                                                                        var html = "";
-                                                                        // for (var i = 0; i < rows.length; i++) {
-                                                                        for (var i = 0; i < localStorage.clickcount; i++) {
-                                                                            html+="<li class='item' id='cart-item-40668505038'>";
-                                                                            html+="<a href='/users/sneaker' title='Climbing shoe - grey / 9.5 / plastics' class='product-image'>";
-                                                                            html+="<img id='cartImg' src='"+rows[i].imgsrc+"' alt='Climbing shoe - grey / 9.5 / plastics'>";
-                                                                            html+="</a>";
-                                                                            html+="<div class='product-details'>";
-                                                                            html+="<p class='product-name'><a href='/users/sneaker' id='cartName'>"+rows[i].brand+" "+rows[i].model+"</a></p>";
-                                                                            html+="<div class='cart-collateral'><span class='price'><span class='money' id='cartPrice' data-currency-usd='$675.00' data-currency='USD'>"+rows[i].price+"</span></span> x 1</div>";
-                                                                            html+="<a href='javascript:void(0)' onclick='removeToCart()' title='Remove This Item' class='btn-remove'><span class='zmdi zmdi-close'></span></a>";
-                                                                            html+="</div>";
-                                                                            html+="</li>";
-
-
-
-                                                                        }
-                                                                        html+="";
-                                                                        $("#cartListDetails").html(html);
-
-                                                                    }else{
-                                                                        $("#static-item").css("display", "none");
-                                                                    }
-                                                                    
-                                                                });
-
-                                                            </script>
 
                                                             <span class="cartCountspan">Item</span>
 
@@ -294,13 +241,13 @@
                                                         <div class="has-items" id="static-item">
                                                             <ul class="mini-products-list" id="cartListDetails">
                                                                 <li class="item" id="cart-item-40668505038">
-                                                                    <a href="/users/sneaker" title="Climbing shoe - grey / 9.5 / plastics" class="product-image">
-                                                                    <img id="cartImg" src="/static/images/shoe9_0926fd04-01c0-4c74-b158-0fc24171828f_grandee471.jpg" alt="Climbing shoe - grey / 9.5 / plastics"></a>
+                                                                    <a href="/users/sneaker" title="NIKE - Air Force 1 - grey / 9.5" class="product-image">
+                                                                    <img id="cartImg" src="/static/images/shoe9_0926fd04-01c0-4c74-b158-0fc24171828f_grandee471.jpg" alt="NIKE - Air Force 1 - grey / 9.5"></a>
                                                                     <div class="product-details">
                                                                         <p class="product-name">
-                                                                            <a href="/users/sneaker" id="cartName">Climbing shoe grey / 9.5 / plastics</a>
+                                                                            <a href="/users/sneaker" id="cartName">NIKE - Air Force 1 - grey / 9.5</a>
                                                                         </p>
-                                                                        <div class="cart-collateral"><span class="price"><span class="money" id="cartPrice" data-currency-usd="$675.00" data-currency="USD">$675.00</span></span> x 1</div>
+                                                                        <div class="cart-collateral"><span class="price"><span class="money" id="cartPrice" data-currency-usd="20000RWF" data-currency="USD">20000RWF</span></span> x 1</div>
                                                                     </div>
                                                                     <a href="javascript:void(0)" onclick="removeToCart()" title="Remove This Item" class="btn-remove"><span class="zmdi zmdi-close"></span></a>
                                                                 </li>
@@ -308,7 +255,7 @@
                                                             <div class="summary">
                                                                 <p class="total">
                                                                     <span class="label">Cart total:</span>
-                                                                    <span class="price"><span class="money">$0.00</span></span>
+                                                                    <span class="price"><span class="money">20000RWF</span></span>
                                                                 </p>
                                                             </div>
                                                             <div class="actions">
