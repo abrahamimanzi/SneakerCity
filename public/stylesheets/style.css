@@ -1,13 +1,12 @@
 
-@font-face {
-	font-family: 'icomoon';
-	src:url('icomoon.html');
-	src:url('icomoond41d.html?#iefix') format('embedded-opentype'),
-		url('icomoon-2.html') format('woff'),
-		url('icomoon-3.html') format('truetype'),
-		url('icomoon-4.html#icomoon') format('svg');
-	font-weight: normal;
-	font-style: normal;
+@font-face{
+  font-family: 'Roboto-Regular';
+  src: url('/static/fonts/Roboto-Regular.ttf');
+}
+
+html,
+body {
+    font-family: 'Roboto-Regular';
 }
 .loading-modal {
     background: #fff url("/static/images/loading.gif") center 14px no-repeat;
@@ -3860,7 +3859,7 @@ input[type='file'] {
   font-weight: bold;
   pointer-events: none;
   border: 1px solid #ebebeb;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto-Regular';
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
@@ -4111,7 +4110,7 @@ input, select, textarea {
   font-size: 14px;
   padding: 15px 20px;
   border: 1px solid #ebebeb;
-  font-family: 'Roboto Slab';
+  font-family: 'Roboto-Regular';
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
