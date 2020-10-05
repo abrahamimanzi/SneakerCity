@@ -5523,7 +5523,7 @@ input[type="search"].sb-search-input {
 
 .site-footer h4,
 .site-footer .h4 {
-    font-family: Roboto Condensed;
+    font-family: Roboto;
     text-transform: inherit;
     font-weight: bold
 }
@@ -5531,7 +5531,7 @@ input[type="search"].sb-search-input {
 .border-title h2,
 .border-title .h2 {
     margin: 0 0 0px;
-    font-family: Roboto Condensed;
+    font-family: Roboto;
     text-transform: inherit;
     letter-spacing: 0.08em
 }
@@ -10956,7 +10956,7 @@ ul.dt-sc-tabs-vertical-frame li a {
     -moz-border-radius: 5px 0px 0px 5px;
     margin: 0px;
     padding: 12px;
-    font-family: Roboto Condensed
+    font-family: Roboto
 }
 
 ul.dt-sc-tabs-vertical-frame li.current:before {
@@ -16366,7 +16366,7 @@ li.dropdown:last-child .site-nav-dropdown ul {
 }
 
 #email-modal .window-window .window-content .title b {
-    font-family: Roboto Condensed
+    font-family: Roboto
 }
 
 .list-collection-products .grid__item:hover a.btn,
