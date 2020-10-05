@@ -2107,13 +2107,6 @@ label.error {
     }
 }
 
-@font-face {
-    font-family: 'icons';
-    src: url("icons890a.html?15169966497413659957");
-    src: url("icons890a.html?15169966497413659957#iefix") format("embedded-opentype"), url("icons890a-2.html?15169966497413659957") format("woff"), url("icons890a-3.html?15169966497413659957") format("truetype"), url("icons890a-4.html?15169966497413659957#timber-icons") format("svg");
-    font-weight: normal;
-    font-style: normal
-}
 
 .icon-fallback-text .icon {
     display: none
@@ -2137,7 +2130,7 @@ label.error {
 
 .supports-fontface .icon:before {
     display: inline;
-    font-family: "icons";
+    font-family: "Roboto";
     text-decoration: none;
     speak: none;
     font-style: normal;
