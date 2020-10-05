@@ -28,7 +28,7 @@ $(window).load(function() {
             html+="</a>";
             html+="<div class='product-details'>";
             html+="<p class='product-name'><a href='/users/sneaker' id='cartName'>"+rows[i].brand+" "+rows[i].model+"</a></p>";
-            html+="<div class='cart-collateral'><span class='price'><span class='money' id='cartPrice' data-currency-usd='20000RWF' data-currency='USD'>"+rows[i].price+"</span></span> x 1</div>";
+            html+="<div class='cart-collateral'><span class='price'><span class='money' id='cartPrice' data-currency-usd='20,000.00RWF' data-currency='USD'>"+rows[i].price+"</span></span> x 1</div>";
             html+="<a href='javascript:void(0)' onclick='removeToCart()' title='Remove This Item' class='btn-remove'><span class='zmdi zmdi-close'></span></a>";
             html+="</div>";
             html+="</li>";
@@ -75,7 +75,7 @@ $(window).load(function() {
             // html+="</a>";
             // html+="<div class='product-details'>";
             // html+="<p class='product-name'><a href='/users/sneaker' id='cartName'>"+rows[i].brand+" "+rows[i].model+"</a></p>";
-            // html+="<div class='cart-collateral'><span class='price'><span class='money' id='cartPrice' data-currency-usd='20000RWF' data-currency='USD'>"+rows[i].price+"</span></span> x 1</div>";
+            // html+="<div class='cart-collateral'><span class='price'><span class='money' id='cartPrice' data-currency-usd='20,000.00RWF' data-currency='USD'>"+rows[i].price+"</span></span> x 1</div>";
             // html+="<a href='javascript:void(0)' onclick='removeToCart()' title='Remove This Item' class='btn-remove'><span class='zmdi zmdi-close'></span></a>";
             // html+="</div>";
             // html+="</li>";
@@ -107,7 +107,7 @@ $(window).load(function() {
 
             html+="<div class='grid__item one-quarter'>";
             html+="<span class='h4 cart__large-labels'>Price</span>";
-            html+="<span class='h5'><span class='money' data-currency-usd='20000RWF'>20000RWF</span></span>";
+            html+="<span class='h5'><span class='money' data-currency-usd='20,000.00RWF'>20,000.00RWF</span></span>";
             html+="</div>";
 
             html+="<div class='grid__item one-quarter text-center'>";
@@ -124,7 +124,7 @@ $(window).load(function() {
             html+="<span class='h4 cart__large-labels'>Total</span>";
             html+="<span class='h5'>";
 
-            html+="<span class='money' data-currency-usd='20000RWF'>20000RWF</span></span>";
+            html+="<span class='money' data-currency-usd='20,000.00RWF'>20,000.00RWF</span></span>";
 
             html+="</div>";
             html+="<div class='grid__item one-quarter text-center'>";
